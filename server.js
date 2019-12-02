@@ -7,7 +7,7 @@ var path=require('path');
  
 var server = http.createServer(function (request, response) {
     var pathname = url.parse(request.url).pathname;
-    var realPath = path.join("webapp", pathname);    //这里设置自己的文件名称;
+    var realPath = path.join("/", pathname);    //这里设置自己的文件名称;
  
     var ext = path.extname(realPath);
     ext = ext ? ext.slice(1) : 'unknown';
