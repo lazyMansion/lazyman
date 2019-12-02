@@ -12,8 +12,6 @@ var server = http.createServer(function (request, response) {
     var ext = path.extname(realPath);
     ext = ext ? ext.slice(1) : 'unknown';
     fs.exists(realPath, function (exists) {
-        console.log('realPath',realPath)
-        console.log('exists',exists)
         if (!exists) {
             response.writeHead(404, {
                 'Content-Type': 'text/plain'
